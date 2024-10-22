@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "vercel/",
+      "src": "app.py",
       "use": "@vercel/python"
     }
   ],
@@ -10,12 +10,6 @@
     {
       "src": "/(.*)",
       "dest": "app.py"
-    },
-
-    {
-      "src": "/templates",
-      "dest": "index.html"
     }
-
   ]
 }
