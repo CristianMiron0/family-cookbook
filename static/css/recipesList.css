@@ -1,10 +1,10 @@
 .recipesList {
-    background-image: url(/static/background.png);
+    background-image: url(/static/Backgroundd.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     padding-top: 90px;
-    padding-bottom: 60px;
+    padding-bottom: 120px;
 }
 
 .recipesList .pageTitle{
@@ -12,19 +12,18 @@
     text-align: center;
     color: black;
     font-size: 35px;
-    position: relative;
+    position: relative; 
     font-weight: bold;
     margin-bottom: 70px;
 }
 
 .container{
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 15px;
     box-sizing: border-box;
     color: #838383;
     font-family: "Poppins", sans-serif;
-    font-size: 14px;
+    font-size: 15px;
+    max-height: 400px;
+    overflow-y: auto;
 }
 
 .container .row {
@@ -37,10 +36,10 @@
 .container .item {
     position: relative;
     flex-basis: calc(33.33% - 30px);
-    margin: 15px;
+    margin: 10px;
     box-sizing: border-box;
-    height: 250px;
     overflow: hidden;
+    aspect-ratio: 4 / 2;
 }
 
 .container .item img {
@@ -102,4 +101,27 @@
 
 .recipesList .pagination > a:hover {
     background-color: black;
+}
+
+@media (max-width: 1366px) {
+    .container {
+        max-height: 500px;
+        overflow-y: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .container .item {
+        flex-basis: calc(50% - 30px);
+    }
+    .recipesList .pageTitle {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container .item {
+        flex-basis: 100%;
+    }
 }
